@@ -88,7 +88,7 @@ const Sidebar = () => {
                   }
                 >
                   {({ isActive }) => (
-                    <li className="w-full flex items-center justify-start gap-4 pl-12 p-5">
+                    <li className="w-full flex items-center justify-start gap-4 pl-12 p-5 hover:font-semibold">
                       <img
                         src={isActive ? item.hoverIcon : item.icon}
                         alt={item.name}
@@ -110,7 +110,7 @@ const Sidebar = () => {
                   }
                 >
                   {({ isActive }) => (
-                    <li className="w-full flex items-center justify-start gap-4 pl-12 p-5">
+                    <li className="w-full flex items-center justify-start gap-4 pl-12 p-5 hover:font-semibold">
                       <img
                         src={isActive ? item.hoverIcon : item.icon}
                         alt={item.name}
@@ -134,7 +134,7 @@ const Sidebar = () => {
               }
             >
               {({ isActive }) => (
-                <li className="w-full flex items-center justify-start gap-4 pl-12 p-5">
+                <li className="w-full flex items-center justify-start gap-4 pl-12 p-5 hover:font-semibold">
                   <img
                     src={isActive ? item.hoverIcon : item.icon}
                     alt={item.name}

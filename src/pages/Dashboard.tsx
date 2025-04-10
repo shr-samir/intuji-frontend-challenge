@@ -55,7 +55,7 @@ const Dashboard = () => {
               trendIcon={icons.arrowAngledGreen}
               trendIconColor="#31D3A3"
               rate={"15"}
-              textColor="white"
+              color1="white"
             />
             <StatCard
               title="Saving"
@@ -65,7 +65,6 @@ const Dashboard = () => {
               trendIcon={icons.arrowAngledRed}
               trendIconColor="#FE3766"
               rate={"10"}
-              textColor="text"
             />
             <StatCard
               title="Expenses"
@@ -75,7 +74,6 @@ const Dashboard = () => {
               trendIcon={icons.arrowAngledYellow}
               trendIconColor="#F9BA33"
               rate={"2"}
-              textColor="text"
             />
             <StatCard
               title="Incomes"
@@ -85,15 +83,14 @@ const Dashboard = () => {
               trendIcon={icons.arrowAngledBlue}
               trendIconColor="#1775E4"
               rate={"8"}
-              textColor="text"
             />
           </div>
         </div>
 
         <div className="bg-white rounded-xl p-4 flex flex-col gap-6">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             <h3 className="font-bold text-xl">Saving Plan</h3>
-            <span className="text-custom-blue hover:underline cursor-pointer">
+            <span className="text-custom-blue hover:underline cursor-pointer text-sm sm:text-base">
               See All
             </span>
           </div>
@@ -128,9 +125,9 @@ const Dashboard = () => {
         </div>
 
         <div className="bg-white rounded-xl p-4 flex flex-col gap-6 justify-between">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             <h3 className="font-bold text-xl">Recent Transaction</h3>
-            <span className="text-custom-blue hover:underline cursor-pointer">
+            <span className="text-custom-blue hover:underline cursor-pointer text-sm sm:text-base">
               See All
             </span>
           </div>

@@ -19,16 +19,16 @@ const RecentTransactionCard = ({
   return (
     <div className="flex justify-between items-center">
       <div className="flex gap-2 items-center">
-        <div className="bg-background-dark rounded-full flex items-center justify-center p-3.5">
-          <img src={image} alt="Profile Picture" className="w-6" />
+        <div className="bg-background-dark rounded-full flex items-center justify-center p-2.5 sm:p-3.5">
+          <img src={image} alt="Profile Picture" className="w-5 sm:w-6" />
         </div>
         <div className="flex flex-col gap-1">
-          <span className="font-semibold text-lg">{name}</span>
+          <span className="font-semibold sm:text-lg">{name}</span>
           <span className="font-semibold text-xs opacity-50">{transactionDate}</span>
         </div>
       </div>
       <div className="flex flex-col gap-1 items-center">
-          <span className="font-semibold text-lg">${amount}</span>
+          <span className="font-semibold sm:text-lg">${amount}</span>
           <span className={`text-xs ${statusColor}`}>{status}</span>
         </div>
     </div>

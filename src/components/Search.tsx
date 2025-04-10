@@ -25,7 +25,7 @@ const Search = ({ query, setQuery }: SearchProps) => {
 
       {query.length > 0 && (
         <button type="button" className="cursor-pointer" onClick={clearInput}>
-          clear
+          <img src={icons.x} alt="clear" />
         </button>
       )}
     </div>

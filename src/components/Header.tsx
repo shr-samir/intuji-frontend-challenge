@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { icons } from "../assets/icons";
 import Search from "./Search";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { navItems1, navItems2, navItems3 } from "./Sidebar";
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
 
   const location = useLocation();
 
-  const routeTitles: {[key: string]: string} = {
+  const routeTitles: { [key: string]: string } = {
     "/": "Dashboard",
     "/dashboard": "Dashboard",
     "/schedule": "Schedule",
@@ -22,15 +22,13 @@ const Header = () => {
     "/settings": "Settings",
     "/help": "Help",
     "/logout": "Logout",
-  }
+  };
 
-  const activeTitle = routeTitles[location.pathname]
+  const activeTitle = routeTitles[location.pathname];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -61,17 +59,17 @@ const Header = () => {
             <img
               src={icons.bell}
               alt="notification"
-              className="px-5 py-3 border border-background-dark rounded-full"
+              className="px-5 py-3 hover:bg-background-dark cursor-pointer border border-background-dark rounded-full"
             />
           </div>
           <div>
             <img
               src={icons.message}
               alt="message"
-              className="px-5 py-3 border border-background-dark rounded-full"
+              className="px-5 py-3 hover:bg-background-dark cursor-pointer  border border-background-dark rounded-full"
             />
           </div>
-          <div className="flex items-center justify-center gap-[10px]">
+          <div className="flex items-center justify-center gap-2.5 cursor-pointer">
             <div className="bg-background-dark rounded-full flex items-center justify-center p-2.5 outline-1 outline-background-dark border border-white">
               <img src={user.pp} alt="logo" className="w-6" />
             </div>
@@ -88,8 +86,8 @@ const Header = () => {
             <div className="w-5 sm:w-8" onClick={toggleMenu}>
               <img src={icons.hamburger} alt="Menu" className="w-full" />
             </div>
-            <span className="font-semibold text-xl">{activeTitle}</span>
-            <div className="bg-background-dark rounded-full flex items-center justify-center p-1.5 sm:p-3">
+            <span className="font-semibold text-2xl md:text-3xl">{activeTitle}</span>
+            <div className="bg-background-dark rounded-full flex items-center justify-center p-2 sm:p-3">
               <img
                 src={icons.gallery}
                 alt="Profile Picture"
@@ -104,12 +102,17 @@ const Header = () => {
       </div>
 
       <div
-        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
-          isMenuOpen ? "w-full z-10" : "hidden"
-        }`}
+        className={`fixed top-0 right-0 bottom-0 bg-white transition-transform duration-300 ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        } w-full z-10`}
       >
         <div className="flex flex-col text-gray-600">
-          <div className="flex items-center gap-4 p-4" onClick={toggleMenu}>
+          <div className="flex items-center justify-between gap-4 p-4" onClick={toggleMenu}>
+            <Link to="/" onClick={toggleMenu}>
+            <span className="bg-background-dark w-[178px] flex items-center justify-center">
+              <img src={icons.gallery} alt="logo" className="my-1.5"/>
+            </span>
+          </Link>
             <img src={icons.x} />
           </div>
           <ul className="p-4 flex flex-col gap-5">
@@ -119,11 +122,7 @@ const Header = () => {
                 to={item.path}
                 onClick={toggleMenu}
                 className={({ isActive }) =>
-                  `flex ${
-                    isActive
-                      ? "font-semibold"
-                      : ""
-                  }`
+                  `flex ${isActive ? "font-semibold" : ""}`
                 }
               >
                 {({ isActive }) => (
@@ -143,11 +142,7 @@ const Header = () => {
                 to={item.path}
                 onClick={toggleMenu}
                 className={({ isActive }) =>
-                  `flex ${
-                    isActive
-                      ? "font-semibold"
-                      : ""
-                  }`
+                  `flex ${isActive ? "font-semibold" : ""}`
                 }
               >
                 {({ isActive }) => (
@@ -167,11 +162,7 @@ const Header = () => {
                 to={item.path}
                 onClick={toggleMenu}
                 className={({ isActive }) =>
-                  `flex ${
-                    isActive
-                      ? "font-semibold"
-                      : ""
-                  }`
+                  `flex ${isActive ? "font-semibold" : ""}`
                 }
               >
                 {({ isActive }) => (
@@ -193,5 +184,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
