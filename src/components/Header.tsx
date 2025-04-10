@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { icons } from "../assets/icons";
+import { assets } from "../assets";
 import Search from "./Search";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { navItems1, navItems2, navItems3 } from "./Sidebar";
@@ -45,7 +45,7 @@ const Header = () => {
 
   const user = {
     name: "Mirie Kiritani",
-    pp: icons.gallery,
+    pp: assets.gallery,
   };
 
   return (
@@ -57,14 +57,14 @@ const Header = () => {
         <div className="bg-white rounded-full p-2 flex gap-[10px] items-center justify-center lg:col-span-2 xl:col-span-1">
           <div>
             <img
-              src={icons.bell}
+              src={assets.bell}
               alt="notification"
               className="px-5 py-3 hover:bg-background-dark cursor-pointer border border-background-dark rounded-full"
             />
           </div>
           <div>
             <img
-              src={icons.message}
+              src={assets.message}
               alt="message"
               className="px-5 py-3 hover:bg-background-dark cursor-pointer  border border-background-dark rounded-full"
             />
@@ -74,7 +74,7 @@ const Header = () => {
               <img src={user.pp} alt="logo" className="w-6" />
             </div>
             <span>{user.name}</span>
-            <img src={icons.arrowDown} alt="arrow-down" />
+            <img src={assets.arrowDown} alt="arrow-down" />
           </div>
         </div>
       </div>
@@ -84,12 +84,12 @@ const Header = () => {
         <div className="flex flex-col gap-8">
           <div className="flex justify-between items-center gap-2">
             <div className="w-5 sm:w-8" onClick={toggleMenu}>
-              <img src={icons.hamburger} alt="Menu" className="w-full" />
+              <img src={assets.hamburger} alt="Menu" className="w-full" />
             </div>
             <span className="font-semibold text-2xl md:text-3xl">{activeTitle}</span>
             <div className="bg-background-dark rounded-full flex items-center justify-center p-2 sm:p-3">
               <img
-                src={icons.gallery}
+                src={assets.gallery}
                 alt="Profile Picture"
                 className="w-4 sm:w-6"
               />
@@ -110,10 +110,10 @@ const Header = () => {
           <div className="flex items-center justify-between gap-4 p-4" onClick={toggleMenu}>
             <Link to="/" onClick={toggleMenu}>
             <span className="bg-background-dark w-[178px] flex items-center justify-center">
-              <img src={icons.gallery} alt="logo" className="my-1.5"/>
+              <img src={assets.gallery} alt="logo" className="my-1.5"/>
             </span>
           </Link>
-            <img src={icons.x} />
+            <img src={assets.x} />
           </div>
           <ul className="p-4 flex flex-col gap-5">
             {navItems1.map((item) => (

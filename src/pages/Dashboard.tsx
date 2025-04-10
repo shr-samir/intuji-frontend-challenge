@@ -1,4 +1,4 @@
-import { icons } from "../assets/icons";
+import { assets } from "../assets";
 import Analytics from "../components/Analytics";
 import RecentTransactionCard from "../components/RecentTransactionCard";
 import SavingPlanCard from "../components/SavingPlanCard";
@@ -12,7 +12,7 @@ const Dashboard = () => {
       transactionDate: "August 20, 2022",
       status: "Completed",
       statusColor: "text-custom-green",
-      image: icons.gallery,
+      image: assets.gallery,
     },
     {
       name: "Youtube",
@@ -20,7 +20,7 @@ const Dashboard = () => {
       transactionDate: "August 20, 2022",
       status: "Completed",
       statusColor: "text-custom-green",
-      image: icons.gallery,
+      image: assets.gallery,
     },
     {
       name: "Spotify",
@@ -28,7 +28,7 @@ const Dashboard = () => {
       transactionDate: "August 20, 2022",
       status: "Completed",
       statusColor: "text-custom-green",
-      image: icons.gallery,
+      image: assets.gallery,
     },
     {
       name: "Freepik",
@@ -36,7 +36,7 @@ const Dashboard = () => {
       transactionDate: "August 20, 2022",
       status: "Completed",
       statusColor: "text-custom-green",
-      image: icons.gallery,
+      image: assets.gallery,
     },
   ];
 
@@ -50,9 +50,9 @@ const Dashboard = () => {
             <StatCard
               title="Your Balance"
               amount={"28,891.14"}
-              titleIcon={icons.wallet}
+              titleIcon={assets.wallet}
               bgColor="custom-blue"
-              trendIcon={icons.arrowAngledGreen}
+              trendIcon={assets.arrowAngledGreen}
               trendIconColor="#31D3A3"
               rate={"15"}
               color1="white"
@@ -60,27 +60,27 @@ const Dashboard = () => {
             <StatCard
               title="Saving"
               amount={"1,050.44"}
-              titleIcon={icons.save}
+              titleIcon={assets.save}
               bgColor="white"
-              trendIcon={icons.arrowAngledRed}
+              trendIcon={assets.arrowAngledRed}
               trendIconColor="#FE3766"
               rate={"10"}
             />
             <StatCard
               title="Expenses"
               amount={"200.31"}
-              titleIcon={icons.directUp}
+              titleIcon={assets.directUp}
               bgColor="white"
-              trendIcon={icons.arrowAngledYellow}
+              trendIcon={assets.arrowAngledYellow}
               trendIconColor="#F9BA33"
               rate={"2"}
             />
             <StatCard
               title="Incomes"
               amount={"21,121.00"}
-              titleIcon={icons.directDown}
+              titleIcon={assets.directDown}
               bgColor="white"
-              trendIcon={icons.arrowAngledBlue}
+              trendIcon={assets.arrowAngledBlue}
               trendIconColor="#1775E4"
               rate={"8"}
             />

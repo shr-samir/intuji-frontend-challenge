@@ -1,4 +1,4 @@
-import { icons } from "../assets/icons";
+import { assets } from "../assets";
 
 interface StatCardProps {
   title: string;
@@ -50,9 +50,9 @@ const StatCard = ({
       <div className="flex justify-between">
         <span className={` text-2xl font-semibold`} style={{color: color1}}>${amount}</span>
         {bgColor === "white" ? (
-          <img src={icons.arrowRightDark} alt="" />
+          <img src={assets.arrowRightDark} alt="" />
         ) : (
-          <img src={icons.arrowRightLight} alt="" />
+          <img src={assets.arrowRightLight} alt="" />
         )}
       </div>
     </div>

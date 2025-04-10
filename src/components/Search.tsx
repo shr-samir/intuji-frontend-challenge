@@ -1,4 +1,4 @@
-import { icons } from "../assets/icons";
+import { assets } from "../assets";
 
 interface SearchProps {
   query: string;
@@ -14,7 +14,7 @@ const Search = ({ query, setQuery }: SearchProps) => {
 
   return (
     <div className="flex items-center gap-3 rounded-full px-6 py-3 md:py-5 bg-white text-sm md:text-base">
-      <img src={icons.search} alt="search" />
+      <img src={assets.search} alt="search" />
       <input
         type="text"
         placeholder="Search here ..."
@@ -25,7 +25,7 @@ const Search = ({ query, setQuery }: SearchProps) => {
 
       {query.length > 0 && (
         <button type="button" className="cursor-pointer" onClick={clearInput}>
-          <img src={icons.x} alt="clear" />
+          <img src={assets.x} alt="clear" />
         </button>
       )}
     </div>

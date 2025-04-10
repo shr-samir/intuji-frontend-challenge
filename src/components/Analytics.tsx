@@ -1,5 +1,5 @@
 import { useState} from "react";
-import { icons } from "../assets/icons";
+import { assets } from "../assets";
 
 
 const Analytics = () => {
@@ -37,7 +37,7 @@ const Analytics = () => {
               onClick={toggleDropdown}
             >
               <span className="text-[8px] sm:text-sm text-text/70">{selectedOption}</span>
-              <img src={icons.arrowDown} alt="down-arrow" className="w-1.5 sm:w-3" />
+              <img src={assets.arrowDown} alt="down-arrow" className="w-1.5 sm:w-3" />
             </div>
 
             {isOpen && (
@@ -58,7 +58,7 @@ const Analytics = () => {
       </div>
 
       <div className="w-full">
-        <img src={icons.graph} alt="Graph" className="w-full h-auto"/>
+        <img src={assets.graph} alt="Graph" className="w-full h-auto"/>
       </div>
     </div>
   );
