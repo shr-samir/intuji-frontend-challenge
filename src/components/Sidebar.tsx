@@ -1,7 +1,7 @@
 import { icons } from "../assets/icons";
 import { Link, NavLink } from "react-router-dom";
 
-const navItems1 = [
+export const navItems1 = [
   {
     name: "Dashboard",
     icon: icons.dashboard,
@@ -34,7 +34,7 @@ const navItems1 = [
   },
 ];
 
-const navItems2 = [
+export const navItems2 = [
   {
     name: "Profile",
     icon: icons.user,
@@ -49,7 +49,7 @@ const navItems2 = [
   },
 ];
 
-const navItems3 = [
+export const navItems3 = [
   {
     name: "Help",
     icon: icons.infoCircle,
@@ -64,25 +64,27 @@ const navItems3 = [
   },
 ];
 
+
 const Sidebar = () => {
+
   return (
     <aside className="bg-white">
-      <div className="max-w-[280px] h-full flex flex-col justify-between">
-        <div className="flex flex-col">
+      <div className="max-w-[280px] h-full hidden lg:flex flex-col justify-between items-center">
+        <div className="flex flex-col gap-3">
           <Link to="/">
-            <span className="bg-background-dark w-[178px] flex items-center justify-center px-[77px] py-[14px] mt-9 ml-[35px] mr-[66px] mb-8">
-              <img src={icons.gallery} alt="logo" />
+            <span className="bg-background-dark w-[80px]  xl:w-[178px] flex items-center justify-center m-9">
+              <img src={icons.gallery} alt="logo" className="my-3.5"/>
             </span>
           </Link>
 
           <div className="flex flex-col gap-9">
-            <ul className="flex flex-col">
+            <ul className="flex flex-col justify-center">
               {navItems1.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `flex ${isActive ? "font-semibold border-l-4" : ""}`
+                    `flex ${isActive ? "font-semibold border-l-4 border-custom-blue" : ""}`
                   }
                 >
                   {({ isActive }) => (
@@ -91,7 +93,7 @@ const Sidebar = () => {
                         src={isActive ? item.hoverIcon : item.icon}
                         alt={item.name}
                       />
-                      <span>{item.name}</span>
+                      <span className="hidden xl:block">{item.name}</span>
                     </li>
                   )}
                 </NavLink>
@@ -104,7 +106,7 @@ const Sidebar = () => {
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `flex ${isActive ? "font-semibold border-l-4" : ""}`
+                    `flex ${isActive ? "font-semibold border-l-4 border-custom-blue" : ""}`
                   }
                 >
                   {({ isActive }) => (
@@ -113,7 +115,7 @@ const Sidebar = () => {
                         src={isActive ? item.hoverIcon : item.icon}
                         alt={item.name}
                       />
-                      <span>{item.name}</span>
+                      <span className="hidden xl:block">{item.name}</span>
                     </li>
                   )}
                 </NavLink>
@@ -128,7 +130,7 @@ const Sidebar = () => {
               key={item.name}
               to={item.path}
               className={({ isActive }) =>
-                `flex ${isActive ? "font-semibold border-l-4" : ""}`
+                `flex ${isActive ? "font-semibold border-l-4 border-custom-blue" : ""}`
               }
             >
               {({ isActive }) => (
@@ -137,7 +139,7 @@ const Sidebar = () => {
                     src={isActive ? item.hoverIcon : item.icon}
                     alt={item.name}
                   />
-                  <span>{item.name}</span>
+                  <span className="hidden xl:block">{item.name}</span>
                 </li>
               )}
             </NavLink>

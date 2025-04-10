@@ -15,10 +15,11 @@ const routes = [
 
 const App = () => {
   return (
-    <div className="flex bg-background min-h-screen text-text">
+    <div className="bg-background-dark">
+    <div className="max-w-[1440px] m-auto flex bg-background text-text">
       <Sidebar />
 
-      <div className="w-full flex flex-col gap-8 m-8">
+      <div className="w-full flex flex-col gap-8 m-4 sm:my-8 sm:mx-7">
         <Header />
         <Routes>
           {routes.map((route) => (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
+    </div>
     </div>
   );
 };

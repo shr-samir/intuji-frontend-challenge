@@ -6,7 +6,9 @@
   --color-background: #f7f7fb;
   --color-background-dark: #d9d9d9;
   --color-text: #0d163a;
-  --color-active: #4745a4;
+  --color-custom-blue: #4745A4;
+  --color-custom-yellow: #F9BA33;
+  --color-custom-green: #3BBB6E;
 }
 
 * {

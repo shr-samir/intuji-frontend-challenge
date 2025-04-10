@@ -13,7 +13,7 @@ const Search = ({ query, setQuery }: SearchProps) => {
   const clearInput = () => setQuery("");
 
   return (
-    <div className="max-w-[722px] flex items-center gap-3 rounded-full px-6 py-5 bg-white">
+    <div className="flex items-center gap-3 rounded-full px-6 py-3 md:py-5 bg-white text-sm md:text-base">
       <img src={icons.search} alt="search" />
       <input
         type="text"

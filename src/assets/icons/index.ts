@@ -22,7 +22,18 @@ import search from "./search.svg";
 import bell from "./bell.svg";
 import message from "./message.svg";
 import arrowDown from "./arrow-down.svg";
-
+import arrowAngledRed from "./arrowAngled-red.svg";
+import arrowAngledGreen from "./arrowAngled-green.svg";
+import arrowAngledYellow from "./arrowAngled-yellow.svg";
+import arrowAngledBlue from "./arrowAngled-blue.svg";
+import directUp from "./direct-up.svg";
+import directDown from "./direct-down.svg";
+import wallet from "./empty-wallet.svg";
+import save from "./save.svg";
+import arrowRightLight from "./arrow-right-light.svg";
+import arrowRightDark from "./arrow-right-dark.svg";
+import graph from "./graph.png";
+import x from "./x.svg";
 
 export const icons = {
   calendar,
@@ -48,5 +59,17 @@ export const icons = {
   search,
   bell,
   message,
-  arrowDown
+  arrowDown,
+  arrowAngledBlue,
+  arrowAngledGreen,
+  arrowAngledRed,
+  arrowAngledYellow,
+  directUp,
+  directDown,
+  wallet,
+  save,
+  arrowRightLight,
+  arrowRightDark,
+  graph,
+  x,
 };
